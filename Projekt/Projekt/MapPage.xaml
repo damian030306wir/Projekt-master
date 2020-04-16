@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:local="clr-namespace:Projekt;assembly=Projekt"
+            
+			 x:Class="Projekt.MapPage">
+
+    <StackLayout >
+
+
+        <local:CustomMap x:Name="customMap" Margin="3"  IsShowingUser="true" MapType="Street" >
+            <x:Arguments>
+               
+                
+            </x:Arguments>
+        
+
+      </local:CustomMap>
+
+        <Entry x:Name="nazwaEntry" Placeholder="Podaj nazwę punktu:" FontSize="Small" />
+        <Entry x:Name="opisEntry" Placeholder="Opis:" FontSize="Small"/>
+        <Entry x:Name="zagadkaEntry" Placeholder="Zagadka/pytanie do obiektu:" FontSize="Small"/>
+        <Entry x:Name="odpowiedzEntry" Placeholder="Oczekiwana odpowiedź:" FontSize="Small"/>
+        <Entry x:Name="szerokosc" Placeholder="Szerokość geograficzna:" FontSize="Small"/>
+        <Entry x:Name="dlugosc" Placeholder="Długość geograficzna:" FontSize="Small"/>
+
+        <StackLayout  Orientation="Horizontal" Margin="30,0,0,20">
+            <Button Text="Dodaj zdjęcie"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                Clicked="DodajZdjecie" />
+            <Button Text="Dodaj punkt "
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                Clicked="OnButton" />
+            <Button Text="Wyczyść "
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                Clicked="ClearButton" />
+
+
+
+        </StackLayout>
+
+    </StackLayout>
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Lista dostępnych puntków" 
+                        Activated="ListaPunktowPage2"/>
+
+
+    </ContentPage.ToolbarItems>
+
+
+
+
+</ContentPage>
